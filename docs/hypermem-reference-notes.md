@@ -2,14 +2,27 @@
 
 Paper: "HyperMem: Hypergraph Memory for Long-Term Conversations" ([arxiv 2604.08256](https://arxiv.org/abs/2604.08256))
 Authors: Juwei Yue, Chuanrui Hu, Jiawei Sheng, Zuyi Zhou, Wenyuan Zhang, Tingwen Liu, Li Guo, Yafeng Deng
-Published: 2026-04 (~1 week before this note)
+Published: 2026-04
 
-## Status: paper-only, no public code yet
+## Status update (2026-04-19 PM): HyperMem is a sub-module of EverMemOS
 
-WebFetch of the arxiv abstract page (2026-04-19) returned:
-> The provided content does not include links to source code, GitHub repositories, or supplementary materials beyond the paper PDF and HTML versions available through arXiv.
+Original arxiv landing page appeared not to link code. That was incomplete. HyperMem is shipped inside the EverMemOS monorepo at:
 
-Action for Phase 2B: re-check the arxiv page, OpenReview, and authors' personal pages periodically; if no code appears, reimplement from paper spec.
+```
+external/everos/methods/HyperMem/
+├── hypermem/
+├── README.md
+├── requirements.txt
+└── scripts/
+```
+
+See [`evermemos-reference-notes.md`](./evermemos-reference-notes.md) for the full picture. Key corrections vs earlier notes:
+
+- HyperMem (92.73% LoCoMo) is a RESEARCH PROTOTYPE of the conversation-memory layer inside EverMemOS.
+- The commercial / primary system is **EverMemOS** (93.05% LoCoMo, arxiv 2601.02163, 2026-01).
+- Reimplementation from paper spec is no longer necessary — run the upstream `methods/HyperMem/` or the fuller `methods/evermemos/` stack.
+
+The v3 plan's "Phase 2B — HyperMem reimpl" is retired. v4 replaces it with "Phase 2B — execute EverMemOS on LoCoMo via docker-compose".
 
 ## Architecture (from abstract + lineage doc)
 

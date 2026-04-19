@@ -4,16 +4,17 @@
 
 HippoRAG2 vs GAAMA vs **Hyper Triplet** on LoCoMo-10.
 
-See [`docs/hyper-triplet-implementation-plan-v3.md`](docs/hyper-triplet-implementation-plan-v3.md) for the live plan.
-(v1 and v2 preserved as history — v3 supersedes both after the hypergraph lineage analysis.)
+See [`docs/hyper-triplet-implementation-plan-v4.md`](docs/hyper-triplet-implementation-plan-v4.md) for the live plan.
+(v1/v2/v3 preserved as history — v4 supersedes after the EverMemOS finding.)
 
 Supporting design notes:
-- [`docs/hypergraph-memory-lineage.md`](docs/hypergraph-memory-lineage.md) — two-lineage map, HyperMem=92.73% SOTA
+- [`docs/hypergraph-memory-lineage.md`](docs/hypergraph-memory-lineage.md) — two-lineage map (pre-EverMemOS analysis)
+- [`docs/evermemos-reference-notes.md`](docs/evermemos-reference-notes.md) — **EverMemOS = true LoCoMo SOTA 93.05%**, repo map, storage stack, Phase 2B plan
 - [`docs/gaama-reference-notes.md`](docs/gaama-reference-notes.md) — GAAMA upstream code map
 - [`docs/gaama-fork-points.md`](docs/gaama-fork-points.md) — GAAMA replace/extend/reuse map
 - [`docs/hypergraph-rag-reference-notes.md`](docs/hypergraph-rag-reference-notes.md) — HyperGraphRAG (NeurIPS 2025) code map
 - [`docs/hipporag-reference-notes.md`](docs/hipporag-reference-notes.md) — HippoRAG 2 code map + caveat about LoCoMo score
-- [`docs/hypermem-reference-notes.md`](docs/hypermem-reference-notes.md) — HyperMem paper + code availability
+- [`docs/hypermem-reference-notes.md`](docs/hypermem-reference-notes.md) — HyperMem paper, now repositioned as EverMemOS's conversation-memory sub-module
 
 ## Layout
 

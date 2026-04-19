@@ -1,5 +1,15 @@
 # Hyper Triplet: Implementation & Benchmark Plan — v3
 
+> **⚠️ SUPERSEDED BY [v4](./hyper-triplet-implementation-plan-v4.md) — 2026-04-19 PM**
+>
+> v3 treated HyperMem (92.73%) as SOTA. Correction: HyperMem is a sub-module
+> of EverMemOS (arxiv 2601.02163, 2026-01), which scores 93.05% on LoCoMo
+> and is already commercial + open-source (`github.com/EverMind-AI/EverMemOS`).
+> v4 retargets Phase 2B from "reimplement HyperMem from paper" to "run the
+> upstream EverMemOS stack via docker-compose".
+
+---
+
 > Replaces [v2](./hyper-triplet-implementation-plan-v2.md) (2026-04-19).
 > v3 integrates `docs/hypergraph-memory-lineage.md` findings: HyperMem (2026-04) is LoCoMo SOTA at **92.73%**, and the hyper-relational structure underlying v2's "novel contribution" is an established lineage (HINGE 2020 → HyperGraphRAG 2025 → HyperMem 2026-04). v3 reframes the project as a **decomposition benchmark** across two research lineages.
 
