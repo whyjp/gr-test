@@ -1,3 +1,9 @@
+from htb.eval.ablation_runner import (
+    AblationRunner,
+    AblationRunResult,
+    AblationSweepResult,
+    format_ablation_report,
+)
 from htb.eval.interfaces import (
     AnswerResult,
     Judge,
@@ -23,6 +29,9 @@ from htb.eval.multi_runner import (
 from htb.eval.runner import BenchmarkRunner, RunResults
 
 __all__ = [
+    "AblationRunResult",
+    "AblationRunner",
+    "AblationSweepResult",
     "AggregateScore",
     "AnswerResult",
     "BenchmarkRunner",
@@ -39,6 +48,7 @@ __all__ = [
     "SystemResult",
     "aggregate_run",
     "aggregate_runs",
+    "format_ablation_report",
     "format_comparison_table",
     "per_category_accuracy",
 ]
