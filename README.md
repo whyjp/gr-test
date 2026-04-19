@@ -4,6 +4,8 @@
 
 HippoRAG2 vs GAAMA vs **Hyper Triplet** on LoCoMo-10.
 
+**Project north star:** [`docs/hinge-north-star.md`](docs/hinge-north-star.md) — HINGE (WWW 2020, *Beyond Triplets*) defines the hyper-relational invariant this project preserves at every layer. Every design decision is judged against it, not against any current SOTA system.
+
 See [`docs/hyper-triplet-implementation-plan-v4.md`](docs/hyper-triplet-implementation-plan-v4.md) for the live plan.
 (v1/v2/v3 preserved as history — v4 supersedes after the EverMemOS finding.)
 

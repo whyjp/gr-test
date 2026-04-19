@@ -1,5 +1,7 @@
 # Hyper Triplet: Implementation & Benchmark Plan — v4
 
+> **North star**: [`hinge-north-star.md`](./hinge-north-star.md) — HINGE (Rosso et al., WWW 2020) defines the hyper-relational data-model invariant. Every phase below is judged against it. HINGE is the principle; EverMemOS is an instantiation; GAAMA is a degenerate case.
+>
 > Replaces [v3](./hyper-triplet-implementation-plan-v3.md) (2026-04-19, evening).
 > v4 integrates the user-provided EverMemOS analysis:
 > - **EverMemOS** (arxiv 2601.02163, 2026-01) is LoCoMo SOTA at **93.05%**.
