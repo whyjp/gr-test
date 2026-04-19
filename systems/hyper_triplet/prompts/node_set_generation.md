@@ -4,6 +4,14 @@ You are a knowledge extraction system. Given a set of new conversation episodes 
 
 A **node_set** represents one atomic memory unit: a fact `(subject, predicate, object)` plus the typed qualifier key–value pairs that situate it in process and environment (where, when, with whom, what activity, what mood, what topic). This captures what classical `(s, p, o)` triples drop.
 
+<!--
+HINGE alignment (see docs/hinge-north-star.md §6):
+- Invariant #1 (atomic extraction): ONE prompt, ONE JSON response containing fact + qualifiers together.
+- Invariant #2 (no flat-concept reduction): 6 typed qualifier keys, never collapsed to a single "concept" label.
+- Invariant #3 (qualifier typing is load-bearing): location / participant / activity_type / time_reference / mood / topic are distinct types.
+-->
+
+
 ## Why node_sets
 
 A bare fact tells you `a did b with c`. The accompanying qualifiers tell you the process and environment: where it happened, who else was involved, what activity it was part of, when it occurred, the emotional tone, and the broader topic. Context-requiring questions (temporal, multi-hop, open-domain) need the qualifiers to be retrievable alongside the fact. Extract them at the same time so the binding is atomic.
