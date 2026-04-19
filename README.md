@@ -1,5 +1,7 @@
 # hyper-triplet-bench
 
+[![CI](https://github.com/whyjp/gr-test/actions/workflows/ci.yml/badge.svg)](https://github.com/whyjp/gr-test/actions/workflows/ci.yml)
+
 HippoRAG2 vs GAAMA vs **Hyper Triplet** on LoCoMo-10.
 
 See [`docs/hyper-triplet-implementation-plan-v3.md`](docs/hyper-triplet-implementation-plan-v3.md) for the live plan.
