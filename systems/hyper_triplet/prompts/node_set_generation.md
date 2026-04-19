@@ -9,6 +9,7 @@ HINGE alignment (see docs/hinge-north-star.md §6):
 - Invariant #1 (atomic extraction): ONE prompt, ONE JSON response containing fact + qualifiers together.
 - Invariant #2 (no flat-concept reduction): 6 typed qualifier keys, never collapsed to a single "concept" label.
 - Invariant #3 (qualifier typing is load-bearing): location / participant / activity_type / time_reference / mood / topic are distinct types.
+- Invariant #8 (LLM-as-classifier-only for grouping): this prompt is the EXTRACTION pass — allowed to produce new text for facts + qualifiers from the conversation. Any DOWNSTREAM grouping prompts (topic assignment, community labelling, ontology categorisation) MUST be classifier-style yes/no membership calls — never generate summaries, reflections, or community descriptions as authoritative memory nodes.
 -->
 
 

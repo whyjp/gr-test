@@ -70,6 +70,22 @@ Legend: ✅ preserved · ⚠ partial · ❌ violated · N/A no qualifiers in sys
 - Retrieval: currently concatenates adjacent qualifier text into searchable document (`retrieval.py`). Graph propagation over typed edges (PPR-style) not yet implemented — this is the single partial point.
 - **Verdict**: HINGE-faithful at data-model and storage layers. Retrieval layer is the work-in-progress that needs to traverse qualifier edges to fully satisfy invariant 7.
 
+## Invariant 8 — LLM-as-classifier-only (grouping)
+
+Added 2026-04-19 after [`grouping-node-principle.md`](./grouping-node-principle.md).
+Distinguishes encoder-style grouping (reflection, summary of already-extracted facts) from classifier-style grouping (membership assignment to existing structure).
+
+| System | Invariant 8 | Evidence |
+|---|:---:|---|
+| GAAMA | ❌ violated | `LLMReflectionExtractor` is an encoder over already-extracted facts — produces new compressed text stored as authoritative reflection nodes. The ceiling around 78.9% tracks exactly this violation. |
+| HyperGraphRAG | ⚠ partial | Hyperedge `knowledge_segment` is an excerpt copied from source, not newly encoded from facts — closer to extraction than encoding, but not strictly classifier-pure either. |
+| HippoRAG 2 | ✅ preserved | OpenIE triples are extraction (one-pass); no reflection / summary layer. |
+| EverMemOS | ✅ preserved | `MemScene` clustering is geometric (centroid-based, no LLM encoding); `Foresight` is LLM-extracted from conversation text, not from facts; no reflection. |
+| HyperMem | ✅ preserved | Topic / episode detection is LLM-as-classifier (membership yes/no); hypergraph embedding propagation is math, not LLM encoding. |
+| Hyper Triplet (ours) | ✅ preserved | Single extraction pass produces node_sets; no reflection layer; community assignment (Phase D) will be classifier-style via Leiden + membership check. |
+
+The ceiling discontinuity between GAAMA (78.9%) and HyperMem/EverMemOS (92.7-93.05%) is the clearest empirical signature of this invariant: encoder-style grouping caps at ~79%, classifier-style grouping reaches ~93%.
+
 ## Key takeaways
 
 1. **No existing system fully satisfies all 7 HINGE invariants.** Every prior system trades off at least one.

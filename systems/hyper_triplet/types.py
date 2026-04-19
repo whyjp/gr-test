@@ -141,12 +141,21 @@ class L2Context(BaseModel):
 
 
 class L3Auxiliary(BaseModel):
-    """Auxiliary / derived layer: topic, community id, embedding pointer, source ref."""
+    """Auxiliary / derived layer: topic, community id, ontology type, embedding pointer, source ref.
+
+    ``ontology_type`` and ``ontology_properties`` support the Palantir-style
+    Object/Property/Link schema axis called out in
+    ``docs/grouping-node-principle.md`` §4.1 — the third grouping axis beyond
+    temporal (L1) and context (L2). Both fields are optional; gold fixtures
+    and tests that predate v5 Phase A2 still round-trip.
+    """
 
     model_config = ConfigDict(frozen=True)
 
     topic: str | None = None
     community_id: str | None = None
+    ontology_type: str | None = None
+    ontology_properties: tuple[str, ...] = ()
     embedding_ref: str | None = None
     source_ref: str | None = None
 
