@@ -1,5 +1,16 @@
 # Hyper Triplet: Implementation & Benchmark Plan — v2
 
+> **⚠️ SUPERSEDED BY [v3](./hyper-triplet-implementation-plan-v3.md) — 2026-04-19**
+>
+> v2's "hyper-relational KG" novelty framing is invalidated by
+> `docs/hypergraph-memory-lineage.md`: HINGE/StarE/HyperGraphRAG/HyperMem
+> already established this structure, and HyperMem is LoCoMo SOTA at 92.73%.
+>
+> v3 reframes Hyper Triplet as an ablation probe within Lineage A and the
+> benchmark as a decomposition of the +14pp gap between GAAMA and HyperMem.
+
+---
+
 > Replaces [v1](./hyper-triplet-implementation-plan.md) (2026-04-19).
 > v2 reflects findings from actual LoCoMo-10 data inspection, GAAMA code deep-read,
 > and user-confirmed framing around hyper-relational KGs.
