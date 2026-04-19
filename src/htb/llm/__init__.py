@@ -10,6 +10,11 @@ from htb.llm.mock import (
     make_gaama_mock,
     make_hyper_triplet_mock,
 )
+from htb.llm.openai_adapter import (
+    OpenAIAdapter,
+    make_default_extract_adapter,
+    make_default_judge_adapter,
+)
 
 __all__ = [
     "CannedResponse",
@@ -17,11 +22,14 @@ __all__ = [
     "LLMAdapter",
     "LLMCallRecord",
     "MockLLMAdapter",
+    "OpenAIAdapter",
     "build_replay_mock",
     "canned_fact_generation_response",
     "canned_node_set_generation_response",
     "canned_reflection_generation_response",
     "load_fixture",
+    "make_default_extract_adapter",
+    "make_default_judge_adapter",
     "make_gaama_mock",
     "make_hyper_triplet_mock",
 ]
