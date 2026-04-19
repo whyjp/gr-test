@@ -12,6 +12,7 @@ from htb.eval.interfaces import (
     RetrievalResult,
 )
 from htb.eval.judge import KeywordMockJudge
+from htb.eval.llm_judge import JUDGE_PROMPT_TEMPLATE, OpenAIJudge
 from htb.eval.metrics import (
     AggregateScore,
     ScoreRecord,
@@ -49,8 +50,10 @@ __all__ = [
     "BenchmarkRunner",
     "Judge",
     "Judgment",
+    "JUDGE_PROMPT_TEMPLATE",
     "KeywordMockJudge",
     "LoadedResult",
+    "OpenAIJudge",
     "MultiSystemResult",
     "MultiSystemRunner",
     "PairedBootstrapResult",
