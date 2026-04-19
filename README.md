@@ -67,6 +67,10 @@ Offline foundation (API not required):
 - [x] Plan v2 reframed around hyper-relational KG (fact vs memory motivation)
 - [x] Hyper Triplet node_set prompt + LLMNodeSetExtractor + typed models
 - [x] HyperTripletLTMCreator skeleton with in-memory graph + MERGE semantics
+- [x] Hand-crafted LoCoMo conv-26 gold fixture + fixture-replay MockLLM
+- [x] In-memory keyword+IDF retrieval over the hyper-relational graph
+- [x] HyperTripletPipeline adapter — full ingest/retrieve/answer loop runs end-to-end through BenchmarkRunner
+- [x] Baseline references cloned: HyperGraphRAG, HippoRAG 2 (+ HyperMem paper notes)
 
 API-required phases:
 
@@ -82,6 +86,6 @@ See the [plan v2](docs/hyper-triplet-implementation-plan-v2.md) for details.
 ## Running tests
 
 ```bash
-uv run pytest -v                      # 67 tests, all offline, <1s
+uv run pytest -v                      # 98 tests, all offline, <1s
 uv run ruff check src tests systems
 ```
