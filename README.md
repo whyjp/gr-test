@@ -2,7 +2,12 @@
 
 HippoRAG2 vs GAAMA vs **Hyper Triplet** on LoCoMo-10.
 
-See `docs/hyper-triplet-implementation-plan.md` for the full plan.
+See [`docs/hyper-triplet-implementation-plan-v2.md`](docs/hyper-triplet-implementation-plan-v2.md) for the live plan.
+(v1 at `docs/hyper-triplet-implementation-plan.md` is preserved as history.)
+
+Supporting design notes:
+- [`docs/gaama-reference-notes.md`](docs/gaama-reference-notes.md) — GAAMA upstream code map
+- [`docs/gaama-fork-points.md`](docs/gaama-fork-points.md) — Phase 3 replace/extend/reuse map
 
 ## Layout
 
@@ -47,14 +52,30 @@ uv run pytest
 
 ## Status
 
+Offline foundation (API not required):
+
 - [x] Repo scaffold
-- [ ] Python 3.11 venv
-- [ ] LoCoMo-10 dataset + loader
-- [ ] GAAMA reference clone
-- [ ] Offline eval skeleton
-- [ ] Phase 1 HippoRAG2
-- [ ] Phase 2 GAAMA
-- [ ] Phase 3 Hyper Triplet
-- [ ] Phase 4 full eval
-- [ ] Phase 5 ablation
-- [ ] Phase 6 cost analysis
+- [x] Python 3.11 venv (uv)
+- [x] LoCoMo-10 dataset fetch script + loader with schema validation
+- [x] GAAMA reference clone + code map + fork points
+- [x] Offline eval skeleton (Pipeline/Judge protocols, MockJudge, metrics, runner)
+- [x] MockLLMAdapter for offline smoke tests
+- [x] Plan v2 reframed around hyper-relational KG (fact vs memory motivation)
+
+API-required phases:
+
+- [ ] Phase 1 HippoRAG2 baseline
+- [ ] Phase 2 GAAMA reproduction (target 78.9% ± 2%p)
+- [ ] Phase 3 Hyper Triplet — typed qualifier extractor + LTMCreator fork
+- [ ] Phase 4 full 3-system × N-run sweep
+- [ ] Phase 5 ablation A0–A5
+- [ ] Phase 6 efficiency data collection
+
+See the [plan v2](docs/hyper-triplet-implementation-plan-v2.md) for details.
+
+## Running tests
+
+```bash
+uv run pytest -v         # 31 tests, all offline, <1s
+uv run ruff check src tests
+```
