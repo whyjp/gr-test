@@ -1,5 +1,15 @@
 # Hyper Triplet: Implementation & Benchmark Plan — v4
 
+> **⚠️ SUPERSEDED BY [v5](./hyper-triplet-implementation-plan-v5.md) — 2026-04-19 late evening**
+>
+> v5 integrates `docs/my-own-test-design-spec.md`: 4-layer functional separation,
+> star-native storage, 3-stage retrieval, boundary + importance + community detection,
+> and 7 additional principle-level ablations. User-confirmed decisions: module stays
+> `hyper_triplet`, EverMemOS included as baseline, HINGE citation per Rosso 2020,
+> OpenAI LLM, extra benchmarks deferred to Phase 6.
+
+---
+
 > **North star**: [`hinge-north-star.md`](./hinge-north-star.md) — HINGE (Rosso et al., WWW 2020) defines the hyper-relational data-model invariant. Every phase below is judged against it. HINGE is the principle; EverMemOS is an instantiation; GAAMA is a degenerate case.
 >
 > Replaces [v3](./hyper-triplet-implementation-plan-v3.md) (2026-04-19, evening).
