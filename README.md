@@ -61,12 +61,14 @@ Offline foundation (API not required):
 - [x] Offline eval skeleton (Pipeline/Judge protocols, MockJudge, metrics, runner)
 - [x] MockLLMAdapter for offline smoke tests
 - [x] Plan v2 reframed around hyper-relational KG (fact vs memory motivation)
+- [x] Hyper Triplet node_set prompt + LLMNodeSetExtractor + typed models
+- [x] HyperTripletLTMCreator skeleton with in-memory graph + MERGE semantics
 
 API-required phases:
 
 - [ ] Phase 1 HippoRAG2 baseline
 - [ ] Phase 2 GAAMA reproduction (target 78.9% ± 2%p)
-- [ ] Phase 3 Hyper Triplet — typed qualifier extractor + LTMCreator fork
+- [ ] Phase 3 Hyper Triplet — wire LTMCreator skeleton to GAAMA's SqliteMemoryStore
 - [ ] Phase 4 full 3-system × N-run sweep
 - [ ] Phase 5 ablation A0–A5
 - [ ] Phase 6 efficiency data collection
@@ -76,6 +78,6 @@ See the [plan v2](docs/hyper-triplet-implementation-plan-v2.md) for details.
 ## Running tests
 
 ```bash
-uv run pytest -v         # 31 tests, all offline, <1s
-uv run ruff check src tests
+uv run pytest -v                      # 67 tests, all offline, <1s
+uv run ruff check src tests systems
 ```
