@@ -8,7 +8,10 @@ See [`docs/hyper-triplet-implementation-plan-v3.md`](docs/hyper-triplet-implemen
 Supporting design notes:
 - [`docs/hypergraph-memory-lineage.md`](docs/hypergraph-memory-lineage.md) — two-lineage map, HyperMem=92.73% SOTA
 - [`docs/gaama-reference-notes.md`](docs/gaama-reference-notes.md) — GAAMA upstream code map
-- [`docs/gaama-fork-points.md`](docs/gaama-fork-points.md) — Phase 3 replace/extend/reuse map
+- [`docs/gaama-fork-points.md`](docs/gaama-fork-points.md) — GAAMA replace/extend/reuse map
+- [`docs/hypergraph-rag-reference-notes.md`](docs/hypergraph-rag-reference-notes.md) — HyperGraphRAG (NeurIPS 2025) code map
+- [`docs/hipporag-reference-notes.md`](docs/hipporag-reference-notes.md) — HippoRAG 2 code map + caveat about LoCoMo score
+- [`docs/hypermem-reference-notes.md`](docs/hypermem-reference-notes.md) — HyperMem paper + code availability
 
 ## Layout
 
