@@ -1,0 +1,114 @@
+{
+  "source": "conv-26 session_1 turns D1:1..D1:16",
+  "speakers": ["Caroline", "Melanie"],
+  "session_date": "8 May 2023",
+  "notes": "Hand-crafted gold node_sets for offline Pipeline regression. A real LLM run must reproduce the structure (fact shape + qualifier keys present) though exact wording will drift.",
+  "chunks": [
+    {
+      "chunk_id": "conv26_s1_c1",
+      "marker": "D1:3",
+      "episodes": [
+        {"id": "D1:1", "speaker": "Caroline", "text": "Hey Mel! Good to see you! How have you been?"},
+        {"id": "D1:2", "speaker": "Melanie",  "text": "Hey Caroline! Good to see you! I'm swamped with the kids & work. What's up with you? Anything new?"},
+        {"id": "D1:3", "speaker": "Caroline", "text": "I went to a LGBTQ support group yesterday and it was so powerful."},
+        {"id": "D1:4", "speaker": "Melanie",  "text": "Wow, that's cool, Caroline! What happened that was so awesome? Did you hear any inspiring stories?"},
+        {"id": "D1:5", "speaker": "Caroline", "text": "The transgender stories were so inspiring! I was so happy and thankful for all the support."},
+        {"id": "D1:6", "speaker": "Melanie",  "text": "Wow, love that painting! So cool you found such a helpful group. What's it done for you?"},
+        {"id": "D1:7", "speaker": "Caroline", "text": "The support group has made me feel accepted and given me courage to embrace myself."},
+        {"id": "D1:8", "speaker": "Melanie",  "text": "That's really cool. You've got guts. What now?"}
+      ],
+      "gold_node_sets": [
+        {
+          "fact": {"subject": "Caroline", "predicate": "attended", "object": "an LGBTQ support group"},
+          "source_episode_ids": ["D1:3"],
+          "belief": 0.95,
+          "qualifiers": {
+            "time_reference": "7 May 2023",
+            "mood": "powerful",
+            "topic": "lgbtq_support"
+          }
+        },
+        {
+          "fact": {"subject": "Caroline", "predicate": "identifies as", "object": "a transgender woman"},
+          "source_episode_ids": ["D1:5"],
+          "belief": 0.75,
+          "qualifiers": {
+            "topic": "lgbtq_identity"
+          }
+        },
+        {
+          "fact": {"subject": "the LGBTQ support group", "predicate": "made Caroline feel", "object": "accepted and courageous"},
+          "source_episode_ids": ["D1:7"],
+          "belief": 0.9,
+          "qualifiers": {
+            "topic": "lgbtq_support",
+            "mood": "empowered"
+          }
+        }
+      ]
+    },
+    {
+      "chunk_id": "conv26_s1_c2",
+      "marker": "D1:9",
+      "episodes": [
+        {"id": "D1:9",  "speaker": "Caroline", "text": "Gonna continue my edu and check out career options, which is pretty exciting!"},
+        {"id": "D1:10", "speaker": "Melanie",  "text": "Wow, Caroline! What kinda jobs are you thinkin' of? Anything that stands out?"},
+        {"id": "D1:11", "speaker": "Caroline", "text": "I'm keen on counseling or working in mental health - I'd love to support those with similar issues."},
+        {"id": "D1:12", "speaker": "Melanie",  "text": "You'd be a great counselor! Your empathy and understanding will really help the people you work with. By the way, take a look at this."}
+      ],
+      "gold_node_sets": [
+        {
+          "fact": {"subject": "Caroline", "predicate": "plans to continue", "object": "her education"},
+          "source_episode_ids": ["D1:9"],
+          "belief": 0.95,
+          "qualifiers": {
+            "mood": "excited",
+            "topic": "education_plan"
+          }
+        },
+        {
+          "fact": {"subject": "Caroline", "predicate": "is interested in", "object": "counseling or mental health careers"},
+          "source_episode_ids": ["D1:11"],
+          "belief": 0.95,
+          "qualifiers": {
+            "activity_type": "career_planning",
+            "topic": "career_plan"
+          }
+        }
+      ]
+    },
+    {
+      "chunk_id": "conv26_s1_c3",
+      "marker": "D1:13",
+      "episodes": [
+        {"id": "D1:13", "speaker": "Caroline", "text": "Thanks, Melanie! That's really sweet. Is this your own painting?"},
+        {"id": "D1:14", "speaker": "Melanie",  "text": "Yeah, I painted that lake sunrise last year! It's special to me."},
+        {"id": "D1:15", "speaker": "Caroline", "text": "Wow, Melanie! The colors really blend nicely. Painting looks like a great outlet for expressing yourself."},
+        {"id": "D1:16", "speaker": "Melanie",  "text": "Thanks, Caroline! Painting's a fun way to express my feelings and get creative. It's a great way to relax after a long day."}
+      ],
+      "gold_node_sets": [
+        {
+          "fact": {"subject": "Melanie", "predicate": "painted", "object": "a lake sunrise"},
+          "source_episode_ids": ["D1:14"],
+          "belief": 0.95,
+          "qualifiers": {
+            "time_reference": "2022",
+            "activity_type": "painting",
+            "topic": "artistic_creation",
+            "mood": "fond"
+          }
+        },
+        {
+          "fact": {"subject": "Melanie", "predicate": "uses painting for", "object": "emotional expression and relaxation"},
+          "source_episode_ids": ["D1:16"],
+          "belief": 0.9,
+          "qualifiers": {
+            "activity_type": "painting",
+            "topic": "artistic_creation",
+            "mood": "relaxed"
+          }
+        }
+      ]
+    }
+  ]
+}
